@@ -318,7 +318,7 @@ https://www.tooplate.com/view/2115-marvel
               <h2 class="mb-4">Interested to work together? Let's talk</h2>
 
              
-              <form action="index.php" method="post">
+              <form action="php.php" method="post">
                 <div class="row">
                   <div class="col-lg-6 col-12">
                     <input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
@@ -337,26 +337,7 @@ https://www.tooplate.com/view/2115-marvel
                   </div>
                 </div>
               </form>
-            <?php
-
-
-              if ($_SERVER["REQUEST_METHOD"] === "POST") {
-                $name = $_POST["name"];
-                $email = $_POST["email"];
-                $message = $_POST["message"];
-
-                $to = "abdhazouritr@gmail.com"; // Replace with your email address
-                $subject = "New form submission";
-                $body = "Name: $name\nEmail: $email\nMessage: $message";
-
-                if (mail($to, $subject, $body)) {
-                  echo "Email sent successfully.";
-                } else {
-                  echo "Failed to send email.";
-                }
-              }
-
-              ?>
+            
             </div>
           </div>
 
